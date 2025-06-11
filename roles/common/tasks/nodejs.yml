@@ -11,7 +11,7 @@
 
 - name: Import prerequisite tasks
   ansible.builtin.import_tasks:
-    file: prerequisites.yml
+    file: prerequests.yml
 
 - name: Install Nodejs dependences
   ansible.builtin.shell: npm Install
