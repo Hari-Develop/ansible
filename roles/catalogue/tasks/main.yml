@@ -1,0 +1,10 @@
+- name: importing the common role 
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: nodejs
+
+
+- name: Importing the common role 
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: nodejs

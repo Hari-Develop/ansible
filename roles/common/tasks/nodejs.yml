@@ -1,0 +1,20 @@
+
+- name: Configure Node.js YUM repository
+  ansible.builtin.shell:
+    cmd: "curl -fsSL https://rpm.nodesource.com/setup_lts.x | bash -"
+    warn: false
+
+- name: Install Node.js package
+  ansible.builtin.yum:
+    name: nodejs
+    state: present
+
+- name: Import prerequisite tasks
+  ansible.builtin.import_tasks:
+    file: prerequisites.yml
+
+- name: Install Nodejs dependences
+  ansible.builtin.shell: npm Install
+  args:
+    chdir: /app
+  

@@ -1,0 +1,3 @@
+- name: ply sample02 URL
+  ansible.builtin.debug:
+    msg: "{{URL_PLY}}"
