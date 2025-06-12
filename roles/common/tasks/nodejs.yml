@@ -2,6 +2,7 @@
 - name: Configure Node.js YUM repository
   ansible.builtin.shell:
     cmd: "curl -fsSL https://rpm.nodesource.com/setup_lts.x | bash -"
+  args: 
     warn: false
 
 - name: Install Node.js package
