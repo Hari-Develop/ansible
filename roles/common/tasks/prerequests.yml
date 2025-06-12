@@ -14,6 +14,6 @@
 
 - name: Download application artifact
   ansible.builtin.unarchive:
-    src: https://roboshop-artifacts.s3.amazonaws.com/"{{service}}".zip
+    src: https://roboshop-artifacts.s3.amazonaws.com/{{service}}.zip
     dest: /app
     remote_src: yes
